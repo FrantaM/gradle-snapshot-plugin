@@ -33,7 +33,7 @@ sourceSets {
 
 dependencies {
     providedCompile(
-        [group: 'org.projectlombok', name: 'lombok', version: '1.14.8'],
+        [group: 'org.projectlombok', name: 'lombok', version: '1.16.10'],
         [group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.0']
     )
 
