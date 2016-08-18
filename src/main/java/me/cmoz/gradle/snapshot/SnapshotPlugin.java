@@ -52,8 +52,7 @@ public final class SnapshotPlugin implements Plugin<Project> {
             @Override
             public void execute(final JavaPlugin plugin) {
                 final File outputDir = new File(project.getBuildDir(), "snapshot");
-                final SourceSetContainer sourceSets =
-                        (SourceSetContainer) project.getProperties().get("sourceSets");
+                final SourceSetContainer sourceSets = (SourceSetContainer) project.property("sourceSets");
                 sourceSets.getByName("main").getResources().srcDir(outputDir);
 
                 final Task t = tasks.getByName(JavaPlugin.PROCESS_RESOURCES_TASK_NAME);
