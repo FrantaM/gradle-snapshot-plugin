@@ -86,7 +86,7 @@ class SnapshotTaskGitTest {
         }
 
         /* when: */
-        task.execute()
+        task.actions.each { it.execute(task) }
 
         /* then: */
         assert project[Commit.ID_ABBREV] == '7c25255'

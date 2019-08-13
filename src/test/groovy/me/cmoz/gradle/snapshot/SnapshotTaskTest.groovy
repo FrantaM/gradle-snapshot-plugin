@@ -22,7 +22,7 @@ class SnapshotTaskTest {
         }
 
         /* when: */
-        task.execute()
+        task.actions.each { it.execute(task) }
 
         /* then: */
         assert project[Commit.ID_ABBREV] == 'abcdf12'

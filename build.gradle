@@ -33,8 +33,12 @@ sourceSets {
 
 dependencies {
     providedCompile(
-        [group: 'org.projectlombok', name: 'lombok', version: '1.14.8'],
+        [group: 'org.projectlombok', name: 'lombok', version: '1.18.8'],
         [group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.0']
+    )
+
+    annotationProcessor(
+        [group: 'org.projectlombok', name: 'lombok', version: '1.18.8']
     )
 
     compile(
@@ -70,6 +74,10 @@ jar {
                    'Created-By': "Gradle $gradle.gradleVersion",
                    'Build-Jdk': System.properties['java.version']
     }
+}
+
+wrapper {
+    gradleVersion = "5.5.1"
 }
 
 javadoc {

@@ -18,7 +18,7 @@ package me.cmoz.gradle.snapshot;
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
-import lombok.experimental.Builder;
+import lombok.Builder;
 
 import java.util.HashMap;
 import java.util.Map;

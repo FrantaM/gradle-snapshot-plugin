@@ -99,6 +99,7 @@ public class SnapshotTask extends DefaultTask {
 
         FileWriter writer = null;
         try {
+            outputFile.getParentFile().mkdirs();
             properties.store(writer = new FileWriter(outputFile), BUILD_LABEL);
         } finally {
             if (writer != null) {
