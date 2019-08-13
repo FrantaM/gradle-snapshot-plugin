@@ -6,6 +6,8 @@ apply plugin: 'groovy'
 apply plugin: 'signing'
 apply plugin: 'maven'
 apply plugin: 'idea'
+apply plugin: 'java-gradle-plugin'
+apply plugin: 'maven-publish'
 
 group   = 'me.cmoz.gradle'
 version = '2.0.3-SNAPSHOT'
@@ -73,6 +75,15 @@ jar {
                    'Implementation-Version': project.version,
                    'Created-By': "Gradle $gradle.gradleVersion",
                    'Build-Jdk': System.properties['java.version']
+    }
+}
+
+gradlePlugin {
+    plugins {
+        snapshot {
+            id = 'me.cmoz.gradle.snapshot'
+            implementationClass = 'me.cmoz.gradle.snapshot.SnapshotPlugin'
+        }
     }
 }
 
