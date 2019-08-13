@@ -8,6 +8,9 @@ _TMP
 tmp
 out
 bin
+**/testGit/userHome/
+**/testHg/userHome/
+**/testHg/.hg/cache/
 
 ## intellij metadata files
 .idea

@@ -10,7 +10,7 @@ apply plugin: 'java-gradle-plugin'
 apply plugin: 'maven-publish'
 
 group   = 'me.cmoz.gradle'
-version = '2.0.3-SNAPSHOT'
+version = '2.0.3-FrantaM.1'
 
 repositories {
     mavenCentral()
